@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="897.0" style="-fx-background-color: #B0E0E6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="panti_jompo.kamar_controller">
+   <children>
+      <Pane layoutX="20.0" layoutY="20.0" prefHeight="363.0" prefWidth="858.0" style="-fx-background-color: #FFC0CB;">
+         <children>
+            <Button fx:id="btnkmb" layoutX="14.0" layoutY="324.0" mnemonicParsing="false" onAction="#kembali" style="-fx-background-color: #DDA0DD;" text="&lt;" />
+            <Button fx:id="btntmbh" layoutX="204.0" layoutY="208.0" mnemonicParsing="false" onAction="#tambah" style="-fx-background-color: #DDA0DD;" text="tambah" />
+            <Button fx:id="btnupdate" layoutX="133.0" layoutY="208.0" mnemonicParsing="false" onAction="#update" text="update" />
+         </children>
+      </Pane>
+      <VBox layoutX="29.0" layoutY="49.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+         <children>
+            <Label text="Nomor Kamar" />
+            <Label text="Nama Kamar" />
+            <Label text="Kapasitas" />
+            <Label text="Nomor Id Pasien" />
+            <Label text="Nomor Identitas" />
+         </children>
+      </VBox>
+      <VBox layoutX="150.0" layoutY="50.0" prefHeight="180.0" prefWidth="214.0" spacing="10.0">
+         <children>
+            <TextField fx:id="nomor" />
+            <TextField fx:id="nama" />
+            <TextField fx:id="kapasitas" />
+            <TextField fx:id="pasien" />
+            <TextField fx:id="identitas" />
+         </children>
+      </VBox>
+      <TableView fx:id="tbkamar" layoutX="386.0" layoutY="49.0" onMouseClicked="#klik" prefHeight="200.0" prefWidth="490.0">
+        <columns>
+          <TableColumn fx:id="colkamar" prefWidth="94.0" text="Nomof Kamar" />
+          <TableColumn fx:id="colnama" prefWidth="97.0" text="Nama Kamar" />
+            <TableColumn fx:id="colkapasitas" prefWidth="77.0" text="Kapasitas" />
+            <TableColumn fx:id="colpasien" prefWidth="108.0" text="Nomor Id Pasien" />
+            <TableColumn fx:id="colidentitas" prefWidth="113.0" text="Nomor Identitas" />
+        </columns>
+      </TableView>
+      <Pane prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
